@@ -13,5 +13,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Iron Man" />
+
+    <Button
+        android:text="Picame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="95dp"
+        android:onClick="onClick"
+        android:id="@+id/button1" />
 </RelativeLayout>
