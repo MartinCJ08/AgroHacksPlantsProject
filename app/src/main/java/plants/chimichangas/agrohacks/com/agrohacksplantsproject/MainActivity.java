@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
@@ -21,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         DBHelper help = new DBHelper(this);
         SQLiteDatabase db = help.getWritableDatabase();
-        TextView txt =(TextView) findViewById(R.id.testQuery);
+        ListView txt =(ListView) findViewById(R.id.listView1);
         DBManager manager = new DBManager();
         Cursor c = manager.nameQuery();
         String[] from = new String[]{DBManager.NAME};
-        int[] to = new int[]{R.id.testQuery};
+        int[] to = new int[]{R.id.listView1};
         Adapter adap = new SimpleCursorAdapter(this,R.layout.activity_main,c,from, to, 0);
-        txt.setAdapter(adap);
+        txt.setAdapter((ListAdapter) adap);
     }
 
 
