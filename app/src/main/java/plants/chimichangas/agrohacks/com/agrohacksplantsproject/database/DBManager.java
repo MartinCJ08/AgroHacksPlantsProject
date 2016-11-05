@@ -1,5 +1,8 @@
 package plants.chimichangas.agrohacks.com.agrohacksplantsproject.database;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
 /**
  * Created by Jona622 on 11/5/16.
  */
@@ -13,4 +16,10 @@ public class DBManager {
 
     public static final String CREATE_TABLE=" create table "+TABLE_NAME+" ("+ID
                     +" integer primary key autoincrement not null,"+NAME+" text not null,"+PLAGAS+" text not null,"+CONSEJOS+" text not null);";
+    private DBHelper helper;
+    private SQLiteDatabase db;
+    public void DBManager(Context context){
+        helper = new DBHelper(context);
+        db = helper.getWritableDatabase();
+    }
 }
