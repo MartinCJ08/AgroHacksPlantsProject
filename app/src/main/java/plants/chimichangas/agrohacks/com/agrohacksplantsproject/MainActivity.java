@@ -1,28 +1,16 @@
 package plants.chimichangas.agrohacks.com.agrohacksplantsproject;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
-import android.widget.TextView;
-
-import java.sql.SQLOutput;
-
-import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBHelper;
-import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBManager;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); /*
         DBManager m = new DBManager();
         String[] campos = new String[] {m.NAME, m.PLAGAS};
         String[] args = new String[] {"Cebolla"};
@@ -36,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 String plagas = c.getString(1);
                 System.out.println("Nombre: "+name+" plagas: "+plagas);
             } while (c.moveToNext());
-        }
+        }*/
 
     }
 
@@ -55,10 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(activity);
                 System.out.println("Simulador");
                 break;
-            case R.id.btnPrueba:
-                activity = new Intent(getApplicationContext(), Prueba.class);
-                startActivity(activity);
-                break;
+
         }
     }
 }

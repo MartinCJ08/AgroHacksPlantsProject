@@ -1,14 +1,9 @@
 package plants.chimichangas.agrohacks.com.agrohacksplantsproject;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
-import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBHelper;
-import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBManager;
 
 public class FructoActivity extends AppCompatActivity {
     private String sqlQuery="";
