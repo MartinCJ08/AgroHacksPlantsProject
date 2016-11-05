@@ -19,13 +19,12 @@ public class DBManager {
                     +" integer primary key autoincrement not null,"+NAME+" text not null,"+PLAGAS+" text not null,"+CONSEJOS+" text not null);";
     private DBHelper helper;
     private SQLiteDatabase db;
-    private String[] column;
     public void DBManager(Context context){
         helper = new DBHelper(context);
         db = helper.getWritableDatabase();
     }
     public Cursor nameQuery(){
-        column = new String[]{NAME,PLAGAS,CONSEJOS};
+        String[] column = new String[]{ID,NAME,PLAGAS,CONSEJOS};
         return db.query(TABLE_NAME,column,null,null,null,null,null);
     }
 }
