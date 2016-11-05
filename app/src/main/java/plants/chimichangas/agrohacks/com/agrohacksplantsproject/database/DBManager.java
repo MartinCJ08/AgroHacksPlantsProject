@@ -13,6 +13,6 @@ public class DBManager {
     public static final String CONSEJOS = "consejos";
 
     public static final String CREATE_TABLE=" create table "+TABLE_NAME+" ("+ID
-                    +" integer primary key autoincrement,"+NAME+" text not null,"+LOGO_URI+" text not null,"+
+                    +" integer primary key autoincrement not null,"+NAME+" text not null,"+LOGO_URI+" text not null,"+
                     PLAGAS+" text not null,"+CONSEJOS+" text not null);";
 }
