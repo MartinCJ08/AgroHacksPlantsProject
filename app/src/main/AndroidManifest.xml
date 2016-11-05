@@ -16,8 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".FructoActivity" />
-        <activity android:name=".PlagasActivity" />
-        <activity android:name=".ConsejoActivity"></activity>
+        <activity
+            android:name=".FrucScrollActivity"
+            android:label="@string/title_activity_fruc_scroll"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

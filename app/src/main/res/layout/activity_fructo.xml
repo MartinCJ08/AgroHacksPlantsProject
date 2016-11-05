@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_fructo"
     android:layout_width="match_parent"
@@ -10,4 +11,84 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.FructoActivity">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
+        android:id="@+id/ibtnCeb"
+        android:onClick="onClickScroll" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star"
+        android:layout_alignBottom="@+id/ibtnCeb"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="34dp"
+        android:id="@+id/ibtnMaiz"
+        android:onClick="onClickScroll" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
+        android:id="@+id/imageButton8" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
+        android:id="@+id/imageButton7" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
+        android:id="@+id/ibtnCeb"
+        android:onClick="onClickScroll" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        android:layout_below="@+id/ibtnCeb"
+        android:layout_alignStart="@+id/ibtnCeb"
+        android:layout_marginTop="87dp"
+        android:id="@+id/ibtnAlfa"
+        android:onClick="onClickScroll" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        android:layout_alignBottom="@+id/ibtnAlfa"
+        android:layout_alignEnd="@+id/ibtnMaiz"
+        android:id="@+id/ibtnChile"
+        android:onClick="onClickScroll" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_off"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="97dp"
+        android:id="@+id/ibtnNuez"
+        android:onClick="onClickScroll" />
 </RelativeLayout>
