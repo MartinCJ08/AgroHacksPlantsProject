@@ -27,17 +27,15 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(activity2);
         switch (view.getId()) {
             case R.id.ibtnCultivo:
-                //DO something
                 System.out.println("Cultivo");
                 activity = new Intent(getApplicationContext(), FructoActivity.class);
                 startActivity(activity);
-
                 break;
             case R.id.ibtnProbl:
-                //DO something
-                System.out.println("Problemas");
+                activity = new Intent(getApplicationContext(), frame_2.class);
+                startActivity(activity);
+                System.out.println("Simulador");
                 break;
-
         }
     }
 }
