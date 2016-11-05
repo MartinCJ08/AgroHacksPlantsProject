@@ -20,7 +20,8 @@
             android:name=".FrucScrollActivity"
             android:label="@string/title_activity_fruc_scroll"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".frame_2"></activity>
+        <activity android:name=".frame_2" />
+        <activity android:name=".Prueba"></activity>
     </application>
 
 </manifest>

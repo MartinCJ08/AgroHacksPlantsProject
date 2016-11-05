@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         /*DBHelper help = new DBHelper(this);
-        SQLiteDatabase db = help.getWritableDatabase();*/
+        SQLiteDatabase db = help.getWritableDatabase();
         lista =(ListView) findViewById(R.id.listView1);
         manager = new DBManager();
         cursor = manager.nameQuery();
         String[] from = new String[]{DBManager.NAME,DBManager.PLAGAS};
         int[] to = new int[]{android.R.id.text1,android.R.id.text2};
         adap = new SimpleCursorAdapter(this,android.R.layout.two_line_list_item,cursor,from, to,0);
-        lista.setAdapter(adap);
+        lista.setAdapter(adap);*/
     }
 
 
@@ -51,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 activity = new Intent(getApplicationContext(), frame_2.class);
                 startActivity(activity);
                 System.out.println("Simulador");
+                break;
+            case R.id.btnPrueba:
+                activity = new Intent(getApplicationContext(), Prueba.class);
+                startActivity(activity);
                 break;
         }
     }

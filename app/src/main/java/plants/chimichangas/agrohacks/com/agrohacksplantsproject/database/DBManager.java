@@ -25,6 +25,6 @@ public class DBManager {
     }
     public Cursor nameQuery(){
         String[] column = new String[]{ID,NAME,PLAGAS,CONSEJOS};
-        return db.query(TABLE_NAME,column,null,null,null,null,null);
+        return db.query(TABLE_NAME,column, null,null,null,null,null);
     }
 }
