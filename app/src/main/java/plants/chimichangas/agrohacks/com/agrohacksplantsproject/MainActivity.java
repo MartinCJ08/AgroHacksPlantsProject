@@ -12,35 +12,38 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+import java.sql.SQLOutput;
+
 import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBHelper;
 import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBManager;
 
 public class MainActivity extends AppCompatActivity {
-    ListView lista;
-    DBManager manager;
-    Cursor cursor;
-    SimpleCursorAdapter adap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*DBHelper help = new DBHelper(this);
-        SQLiteDatabase db = help.getWritableDatabase();
-        lista =(ListView) findViewById(R.id.listView1);
-        manager = new DBManager();
-        cursor = manager.nameQuery();
-        String[] from = new String[]{DBManager.NAME,DBManager.PLAGAS};
-        int[] to = new int[]{android.R.id.text1,android.R.id.text2};
-        adap = new SimpleCursorAdapter(this,android.R.layout.two_line_list_item,cursor,from, to,0);
-        lista.setAdapter(adap);*/
+        DBManager m = new DBManager();
+        String[] campos = new String[] {m.NAME, m.PLAGAS};
+        String[] args = new String[] {"Cebolla"};
+
+        Cursor c = m.getDb().query(m.TABLE_NAME, campos, "name=", args, null, null, null);
+
+        if (c.moveToFirst()) {
+            //Recorremos el cursor hasta que no haya más registros
+            do {
+                String name = c.getString(0);
+                String plagas = c.getString(1);
+                System.out.println("Nombre: "+name+" plagas: "+plagas);
+            } while (c.moveToNext());
+        }
+
     }
 
 
     public void onClick(View view){
 
-        //Intent activity2 = new Intent(getApplicationContext(), Activity2.class);
         Intent activity;
-        //startActivity(activity2);
         switch (view.getId()) {
             case R.id.ibtnCultivo:
                 System.out.println("Cultivo");
