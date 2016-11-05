@@ -20,7 +20,16 @@ public class FrucScrollActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace with your own action 1", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        FloatingActionButton sim = (FloatingActionButton) findViewById(R.id.sim);
+        sim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action 2", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
