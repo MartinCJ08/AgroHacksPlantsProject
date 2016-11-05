@@ -6,6 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBHelper;
 import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBManager;
@@ -18,10 +21,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         DBHelper help = new DBHelper(this);
         SQLiteDatabase db = help.getWritableDatabase();
-
+        TextView txt =(TextView) findViewById(R.id.testQuery);
         DBManager manager = new DBManager();
-        System.out.println(manager.nameQuery());
-
+        Cursor c = manager.nameQuery();
+        String[] from = new String[]{DBManager.NAME};
+        int[] to = new int[]{R.id.testQuery};
+        Adapter adap = new SimpleCursorAdapter(this,R.layout.activity_main,c,from, to, 0);
+        txt.setAdapter(adap);
     }
 
 
