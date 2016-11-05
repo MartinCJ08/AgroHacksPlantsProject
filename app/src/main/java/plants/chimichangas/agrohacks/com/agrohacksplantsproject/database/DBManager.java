@@ -1,6 +1,7 @@
 package plants.chimichangas.agrohacks.com.agrohacksplantsproject.database;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 /**
@@ -21,5 +22,9 @@ public class DBManager {
     public void DBManager(Context context){
         helper = new DBHelper(context);
         db = helper.getWritableDatabase();
+    }
+    public Cursor nameQuery(){
+        String[] column = new String[]{NAME};
+        return db.query(TABLE_NAME,column,null,null,null,null,null);
     }
 }

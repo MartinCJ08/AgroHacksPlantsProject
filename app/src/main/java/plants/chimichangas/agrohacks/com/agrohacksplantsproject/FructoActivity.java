@@ -26,12 +26,9 @@ public class FructoActivity extends AppCompatActivity {
             case R.id.ibtnAlfa:
                 //DO something
                 System.out.println("Alfalfa");
-                sName = "Cebolla";
-                /*DBHelper db = new DBHelper(this);
-                if(db.getNameQuery().equals(sName)){
-                    activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
-                    startActivity(activity);
-                }*/
+                sName = "Alfalfa";
+                activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
+                startActivity(activity);
                 break;
             case R.id.ibtnCeb:
                 //DO something

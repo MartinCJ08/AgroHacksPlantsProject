@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBHelper;
+import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         DBHelper help = new DBHelper(this);
         SQLiteDatabase db = help.getWritableDatabase();
+
+        DBManager manager = new DBManager();
+        System.out.println(manager.nameQuery());
 
     }
 
