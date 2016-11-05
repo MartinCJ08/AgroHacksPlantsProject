@@ -25,7 +25,7 @@ public class DBManager {
         db = helper.getWritableDatabase();
     }
     public Cursor nameQuery(){
-        column = new String[]{NAME};
+        column = new String[]{NAME,PLAGAS,CONSEJOS};
         return db.query(TABLE_NAME,column,null,null,null,null,null);
     }
 }

@@ -16,19 +16,22 @@ import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBHelpe
 import plants.chimichangas.agrohacks.com.agrohacksplantsproject.database.DBManager;
 
 public class MainActivity extends AppCompatActivity {
-
+    ListView txt;
+    DBManager manager;
+    Cursor c;
+    Adapter adap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DBHelper help = new DBHelper(this);
-        SQLiteDatabase db = help.getWritableDatabase();
-        ListView txt =(ListView) findViewById(R.id.listView1);
-        DBManager manager = new DBManager();
-        Cursor c = manager.nameQuery();
-        String[] from = new String[]{DBManager.NAME};
-        int[] to = new int[]{R.id.listView1};
-        Adapter adap = new SimpleCursorAdapter(this,R.layout.activity_main,c,from, to, 0);
+        /*DBHelper help = new DBHelper(this);
+        SQLiteDatabase db = help.getWritableDatabase();*/
+        txt =(ListView) findViewById(R.id.listView1);
+        manager = new DBManager();
+        c = manager.nameQuery();
+        String[] from = new String[]{DBManager.NAME,DBManager.PLAGAS};
+        int[] to = new int[]{android.R.id.text1,android.R.id.text2};
+        adap = new SimpleCursorAdapter(this,android.R.layout.two_line_list_item,c,from, to);
         txt.setAdapter((ListAdapter) adap);
     }
 
