@@ -78,6 +78,8 @@ public class frame_2 extends AppCompatActivity {
                         texto3.setText(nom_fer1+":"+fer1*ha+" kg/ha");
                         texto4.setText(nom_fer2+":"+fer2*ha+" kg/ha");
                         texto5.setText(nom_fer3+":"+fer3*ha+" kg/ha");
+                        System.out.println("Select"+ r_n);
+                        System.out.println("Select"+ selected_id);
                         Toast.makeText(frame_2.this,
                                 r_n.getText().toString(),Toast.LENGTH_SHORT).show();;
 

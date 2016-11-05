@@ -28,9 +28,11 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(DBManager.CREATE_TABLE);
+        /*
         FructoActivity f = new FructoActivity();
         Cursor data = db.rawQuery(f.getSqlQuery(),null);
         nameQuery = data.getString(0);
+    */
     }
 
     @Override
