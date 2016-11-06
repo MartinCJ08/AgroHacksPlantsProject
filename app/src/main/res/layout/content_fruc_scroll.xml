@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.FrucScrollActivity"
-    tools:showIn="@layout/activity_fruc_scroll">
+    tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.PlagaActivity"
+    tools:showIn="@layout/activity_plaga">
 
     <TextView
         android:layout_width="wrap_content"

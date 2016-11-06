@@ -17,11 +17,20 @@
         </activity>
         <activity android:name=".FructoActivity" />
         <activity
-            android:name=".FrucScrollActivity"
+            android:name=".PlagaActivity"
             android:label="@string/title_activity_fruc_scroll"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".frame_2" />
-        <activity android:name=".PlagaActivity" />
+        <activity android:name=".infoActivity" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAbl4F-oTWeHQxC4EljT9V8tNz8kXj0fkc"/>
+        <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
     </application>
 
 </manifest>

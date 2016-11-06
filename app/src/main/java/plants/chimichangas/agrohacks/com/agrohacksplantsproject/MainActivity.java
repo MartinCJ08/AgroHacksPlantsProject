@@ -18,25 +18,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     //HOla jona
     }
+    public void btnCultivos(View view){
+        /*DbHelper h = new DbHelper(this);
+        String queryRec = h.getPlantByName("Cebolla");
+        if(queryRec.equals("Cebolla")){
+            System.out.println("El dato existe: "+queryRec);
+        }else{
+            System.out.println("El dato no existe: "+queryRec);
+        }*/
+        startActivity(new Intent(MainActivity.this, FructoActivity.class));
+    }
+    public void btnSim(View view) {
+        Intent intent = new Intent(MainActivity.this, frame_2.class);
+        startActivity(intent);
 
 
-    public void onClick(View view){
-
-        Intent activity;
-        switch (view.getId()) {
-            case R.id.btnCultivos:
-                System.out.println("Cultivo");
-                DbHelper h = new DbHelper(this);
-                System.out.println(h.getPlantByName("Cebolla"));
-                activity = new Intent(getApplicationContext(), FructoActivity.class);
-                startActivity(activity);
-                break;
-            case R.id.btnSim:
-                activity = new Intent(getApplicationContext(), frame_2.class);
-                startActivity(activity);
-                System.out.println("Simulador");
-                break;
-
-        }
     }
 }

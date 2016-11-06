@@ -19,6 +19,7 @@ public class DbHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         //codigo sql
+
         db.execSQL("CREATE TABLE " + PlantContract.PlantEntry.TABLE_NAME + " ("
                 + PlantContract.PlantEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + PlantContract.PlantEntry.ID + " TEXT NOT NULL,"
@@ -32,15 +33,27 @@ public class DbHelper extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //
     }
-    public Cursor getPlantByName(String nombre) {
+    public String getPlantByName(String nombre) {
+        String data = "";
         Cursor c = getReadableDatabase().query(
                 PlantContract.PlantEntry.TABLE_NAME,
                 null,
-                PlantContract.PlantEntry.NAME + " LIKE ?",
-                new String[]{nombre},
+                PlantContract.PlantEntry.NAME + " == '"+nombre+"'",
+                null,//new String[]{nombre},
                 null,
                 null,
                 null);
-        return c;
+        if (c.moveToFirst()){
+            do{
+                data = c.getString(c.getColumnIndex("name"));
+                // do what ever you want here
+            }while(c.moveToNext());
+        }
+        c.close();
+
+        //Cursor c = getReadableDatabase().rawQuery("SELECT name FROM plant WHERE name =="+nombre,null);
+
+        return data;
+
     }
 }

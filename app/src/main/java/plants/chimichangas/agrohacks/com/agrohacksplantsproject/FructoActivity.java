@@ -23,7 +23,7 @@ public class FructoActivity extends AppCompatActivity {
                 //DO something
                 System.out.println("Alfalfa");
                 sName = "Alfalfa";
-                activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
+                activity = new Intent(getApplicationContext(), PlagaActivity.class);
                 startActivity(activity);
                 break;
             case R.id.ibtnCeb:
@@ -31,25 +31,25 @@ public class FructoActivity extends AppCompatActivity {
 
                 System.out.println("Cebolla");
                 sName = "Cebolla";
-                activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
+                activity = new Intent(getApplicationContext(), PlagaActivity.class);
                 startActivity(activity);
                 break;
             case R.id.ibtnChile:
                 System.out.println("Chile jalapeño");
                 sName = "Chile";
-                activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
+                activity = new Intent(getApplicationContext(), PlagaActivity.class);
                 startActivity(activity);
                 break;
             case R.id.ibtnMaiz:
                 System.out.println("Maíz");
                 sName = "Maiz";
-                activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
+                activity = new Intent(getApplicationContext(), PlagaActivity.class);
                 startActivity(activity);
                 break;
             case R.id.ibtnNuez:
                 System.out.println("Nuez");
                 sName = "Nuez";
-                activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
+                activity = new Intent(getApplicationContext(), PlagaActivity.class);
                 startActivity(activity);
                 break;
         }
