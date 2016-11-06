@@ -14,6 +14,6 @@ public class PlantContract {
         public static final String NAME = "name";
         public static final String INFO = "info";
         public static final String PLAGA = "plaga";
-
+        //
     }
 }
