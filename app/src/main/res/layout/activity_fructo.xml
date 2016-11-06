@@ -11,84 +11,58 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.FructoActivity">
 
-    <ImageButton
+    <Button
+        android:text="Cebolla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star"
+        android:layout_marginTop="32dp"
+        android:id="@+id/ibtnCeb"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="39dp"
-        android:id="@+id/ibtnCeb"
-        android:onClick="onClickScroll" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star"
-        android:layout_alignBottom="@+id/ibtnCeb"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="34dp"
-        android:id="@+id/ibtnMaiz"
         android:onClick="onClickScroll" />
 
-    <ImageButton
+    <Button
+        android:text="Alfalfa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="39dp"
-        android:id="@+id/imageButton8" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="39dp"
-        android:id="@+id/imageButton7" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="39dp"
-        android:id="@+id/ibtnCeb"
-        android:onClick="onClickScroll" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:layout_below="@+id/ibtnCeb"
-        android:layout_alignStart="@+id/ibtnCeb"
-        android:layout_marginTop="87dp"
         android:id="@+id/ibtnAlfa"
+        android:layout_below="@+id/ibtnCeb"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentEnd="true"
         android:onClick="onClickScroll" />
 
-    <ImageButton
+    <Button
+        android:text="Chile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:layout_alignBottom="@+id/ibtnAlfa"
-        android:layout_alignEnd="@+id/ibtnMaiz"
+        android:layout_marginTop="12dp"
         android:id="@+id/ibtnChile"
+        android:layout_below="@+id/ibtnAlfa"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:onClick="onClickScroll" />
 
-    <ImageButton
+    <Button
+        android:text="Maíz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_off"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="97dp"
+        android:id="@+id/ibtnMaiz"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/ibtnChile"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClickScroll" />
+
+    <Button
+        android:text="Nuez"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/ibtnNuez"
+        android:layout_below="@+id/ibtnMaiz"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentEnd="true"
         android:onClick="onClickScroll" />
 </RelativeLayout>

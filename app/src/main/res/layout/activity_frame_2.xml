@@ -14,20 +14,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="hectareas"
+        android:text="Hectáreas"
         android:ems="10"
         android:layout_alignBottom="@+id/pendiente"
         android:layout_alignParentStart="true"
         android:id="@+id/hect" />
 
+    <Button
+        android:text="Calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pendiente"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="27dp"
         android:id="@+id/rg_cultivos"
         android:layout_below="@+id/hect"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="28dp">
+        android:layout_alignParentStart="true">
 
         <RadioButton
             android:text="alfalfa"
@@ -37,7 +44,7 @@
             android:layout_weight="1" />
 
         <RadioButton
-            android:text="maiz"
+            android:text="Maíz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/r_2"
@@ -69,44 +76,37 @@
         android:text="."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/f1"
-        android:layout_alignStart="@+id/f1"
-        android:layout_marginTop="11dp"
-        android:id="@+id/f2" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pendiente"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="20dp"
+        android:id="@+id/f1"
+        android:layout_alignTop="@+id/rg_cultivos"
+        android:layout_toEndOf="@+id/rg_cultivos"
+        android:layout_marginStart="34dp" />
 
     <TextView
         android:text="."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="38dp"
         android:id="@+id/prod"
         android:layout_below="@+id/rg_cultivos"
-        android:layout_alignStart="@+id/rg_cultivos"
-        android:layout_marginStart="13dp" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp" />
+
+    <TextView
+        android:text="."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/f2"
+        android:layout_below="@+id/f1"
+        android:layout_alignStart="@+id/f1" />
 
     <TextView
         android:text="."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/f3"
-        android:layout_below="@+id/f2"
-        android:layout_alignStart="@+id/f2"
-        android:layout_marginTop="25dp" />
-
-    <TextView
-        android:text="."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:id="@+id/f1"
-        android:layout_below="@+id/prod"
-        android:layout_alignStart="@+id/prod" />
+        android:layout_marginBottom="11dp"
+        android:layout_alignBottom="@+id/rg_cultivos"
+        android:layout_alignStart="@+id/f2" />
 </RelativeLayout>

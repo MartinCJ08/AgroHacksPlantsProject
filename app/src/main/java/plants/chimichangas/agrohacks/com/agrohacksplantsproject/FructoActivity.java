@@ -16,7 +16,7 @@ public class FructoActivity extends AppCompatActivity {
     public void onClickScroll(View view){
         Intent activity;
         String sName="";
-        sqlQuery = "SELECT name result FROM plants WHERE name=="+sName;
+        //sqlQuery = "SELECT name result FROM plants WHERE name=="+sName;
         switch (view.getId()) {
             case R.id.ibtnAlfa:
                 //DO something
@@ -46,7 +46,6 @@ public class FructoActivity extends AppCompatActivity {
                 startActivity(activity);
                 break;
             case R.id.ibtnNuez:
-
                 System.out.println("Nuez");
                 sName = "Nuez";
                 activity = new Intent(getApplicationContext(), FrucScrollActivity.class);
@@ -54,7 +53,7 @@ public class FructoActivity extends AppCompatActivity {
                 break;
         }
     }
-    public String getSqlQuery(){
+    /*public String getSqlQuery(){
         return sqlQuery;
-    }
+    }*/
 }

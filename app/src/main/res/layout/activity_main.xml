@@ -9,49 +9,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.MainActivity">
+    android:background="#82E063"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iron Man" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listView1"
-        android:layout_below="@+id/ibtnProbl"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="18dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:id="@+id/ibtnCultivo"
-        android:onClick="onClick"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:id="@+id/ibtnProbl"
-        android:layout_marginStart="25dp"
-        android:onClick="onClick"
-        android:layout_alignTop="@+id/ibtnCultivo"
-        android:layout_toEndOf="@+id/ibtnCultivo" />
+tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.MainActivity">
 
     <Button
-        android:text="Button"
+        android:text="Cultivos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/listView1"
-        android:layout_toEndOf="@+id/ibtnProbl"
-        android:layout_marginStart="50dp"
-        android:id="@+id/btnPrueba"
-        android:onClick="onClick" />
+        android:id="@+id/btnCultivos"
+        android:onClick="onClick"
+        android:layout_marginTop="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Simulador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSim"
+        android:onClick="onClick"
+        android:layout_below="@+id/btnCultivos"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="152dp"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
