@@ -14,17 +14,6 @@
 tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.MainActivity">
 
     <Button
-        android:text="Cultivos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnCultivos"
-        android:onClick="onClick"
-        android:layout_marginTop="56dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
         android:text="Simulador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,6 +22,17 @@ tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.MainActi
         android:layout_below="@+id/btnCultivos"
         android:layout_alignParentStart="true"
         android:layout_marginTop="152dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Cultivos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCultivos"
+        android:onClick="onClick"
+        android:layout_marginTop="82dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
