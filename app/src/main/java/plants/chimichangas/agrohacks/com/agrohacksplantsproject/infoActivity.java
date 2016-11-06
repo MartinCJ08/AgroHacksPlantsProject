@@ -39,8 +39,7 @@ public class infoActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap mapita) {
         this.mapita=mapita;
-        mapita.addMarker(new MarkerOptions().position(new LatLng(28.632996,-106.0691)).title(cd));
-        mapita.addMarker(new MarkerOptions().position(l1).title("2222xd"));
+        mapita.addMarker(new MarkerOptions().position(l1).title(cd));
         Toast.makeText(this,"Cord: "+lat+","+longi,Toast.LENGTH_LONG).show();
 
     }
