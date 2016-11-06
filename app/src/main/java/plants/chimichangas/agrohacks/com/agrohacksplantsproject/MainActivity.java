@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.sql.SQLOutput;
+
+import plants.chimichangas.agrohacks.com.agrohacksplantsproject.db.DbHelper;
+import plants.chimichangas.agrohacks.com.agrohacksplantsproject.db.PlantContract;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -35,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.ibtnCultivo:
                 System.out.println("Cultivo");
+                DbHelper h = new DbHelper(this);
+                System.out.println(h.getPlantByName("Cebolla"));
                 activity = new Intent(getApplicationContext(), FructoActivity.class);
                 startActivity(activity);
                 break;
