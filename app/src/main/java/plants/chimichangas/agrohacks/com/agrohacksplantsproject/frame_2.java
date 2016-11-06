@@ -48,11 +48,11 @@ public class frame_2 extends AppCompatActivity {
                             case R.id.r_1:
                                 val=1;
                                 fer1=175;
-                                nom_fer1="fosforo";
+                                nom_fer1="Fósforo";
                                 fer2=150;
-                                nom_fer2="potasio";
+                                nom_fer2="Potasio";
                                 fer3=20;
-                                nom_fer3="nitrogeno(cuando vegetativo plantulas)";
+                                nom_fer3="Nitrógeno(cuando vegetativo plantulas)";
                                 break;
                             case R.id.r_2:
                                 val=3;
@@ -61,37 +61,37 @@ public class frame_2 extends AppCompatActivity {
                                 fer2=0;
                                 nom_fer2="";
                                 fer3=25;
-                                nom_fer3="nitrogeno";
+                                nom_fer3="Nitrógeno";
                                 System.out.println("Radion button 2");
 
                                 break;
                             case R.id.r_3:
                                 val=3;
                                 fer1=72;
-                                nom_fer1="fosforo";
+                                nom_fer1="Fósforo";
                                 fer2=45;
-                                nom_fer2="potasio";
+                                nom_fer2="Potasio";
                                 fer3=30;
-                                nom_fer3="zinc y magnesio";
+                                nom_fer3="Zinc y Magnesio";
                                 break;
                             case R.id.r_4:
 
                                 val=4;
                                 fer1=1;
-                                nom_fer1="fosforo";
+                                nom_fer1="Fósforo";
                                 fer2=4;
-                                nom_fer2="potasio";
+                                nom_fer2="Potasio";
                                 fer3=2;
-                                nom_fer3="nitrogeno";
+                                nom_fer3="Nitrógeno";
                                 break;
                             case R.id.r_5:
                                 val=5;
                                 fer1=1;
-                                nom_fer1="fosforo";
+                                nom_fer1="Fósforo";
                                 fer2=4;
-                                nom_fer2="potasio";
+                                nom_fer2="Potasio";
                                 fer3=2;
-                                nom_fer3="nitrogeno";
+                                nom_fer3="Nitrógeno";
 
                                 break;
                         }
@@ -102,12 +102,12 @@ public class frame_2 extends AppCompatActivity {
                         texto4= (TextView) findViewById(R.id.f2);
                         texto5= (TextView) findViewById(R.id.f3);
                         int ha =Integer.parseInt(texto2.getText().toString()) ;
-                        texto.setText("productividad esperada "+val*ha+" ton/ha");
+                        texto.setText("Productividad esperada "+val*ha+" ton/ha");
                         texto3.setText(nom_fer1+":"+fer1*ha+" kg/ha");
                         texto4.setText(nom_fer2+":"+fer2*ha+" kg/ha");
                         texto5.setText(nom_fer3+":"+fer3*ha+" kg/ha");
-                        System.out.println("r__n "+ r_n);
-                        System.out.println("Select "+ selected_id);
+                        //System.out.println("r__n "+ r_n);
+                        //System.out.println("Select "+ selected_id);
                         Toast.makeText(frame_2.this,
                                 r_n.getText().toString(),Toast.LENGTH_SHORT).show();;
 

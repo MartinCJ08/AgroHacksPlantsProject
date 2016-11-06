@@ -46,10 +46,12 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/sim"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
-        app:layout_anchor="@+id/include"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/app_bar"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        app:layout_anchorGravity="top|left"
+        android:layout_gravity="center_vertical|right" />
 
 </android.support.design.widget.CoordinatorLayout>
