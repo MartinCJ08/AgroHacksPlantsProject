@@ -9,15 +9,17 @@ import java.util.UUID;
 public class Plant {
     private String id;
     private String name;
-    private String info;
+    private float lat;
+    private float longi;
     private String plaga;
 
 
     public Plant(String name,
-                 String info, String plaga) {
+                 int lat,int longi, String plaga) {
         this.id = (UUID.randomUUID().toString());
         this.name = name;
-        this.info = info;
+        this.lat = lat;
+        this.longi=longi;
         this.plaga = plaga;
     }
 
@@ -29,8 +31,8 @@ public class Plant {
         return name;
     }
 
-    public String getInfo() {
-        return info;
+    public String getPos() {
+        return "Lat: "+lat+" Long "+longi;
     }
 
     public String getPlaga() {
