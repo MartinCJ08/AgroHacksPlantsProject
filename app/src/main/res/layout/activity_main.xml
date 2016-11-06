@@ -13,26 +13,29 @@
 
 tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.MainActivity">
 
-    <Button
-        android:text="Simulador"
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSim"
+        app:srcCompat="@drawable/ic_action_name"
+        android:id="@+id/btnSim2"
+        style="@android:style/Widget.Holo.Light.ImageButton"
         android:onClick="btnSim"
-        android:layout_below="@+id/btnCultivos"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="152dp"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginBottom="127dp" />
 
-    <Button
-        android:text="Cultivos"
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCultivos"
+        app:srcCompat="@drawable/ic_stat_hoja"
+        android:id="@+id/btnCultivos2"
+        style="@android:style/Widget.Holo.Light.ImageButton"
         android:onClick="btnCultivos"
-        android:layout_marginTop="82dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:adjustViewBounds="false"
+        android:layout_marginBottom="67dp"
+        android:layout_above="@+id/btnSim2"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

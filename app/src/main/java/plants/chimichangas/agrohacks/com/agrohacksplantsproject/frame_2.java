@@ -104,7 +104,7 @@ public class frame_2 extends AppCompatActivity {
                         texto4= (TextView) findViewById(R.id.f2);
                         texto5= (TextView) findViewById(R.id.f3);
                         int ha =Integer.parseInt(texto2.getText().toString()) ;
-                        texto.setText("Productividad esperada "+val*ha+" ton/ha");
+                        texto.setText("Productividad tentativa de "+val*ha+" toneladas por cosecha");
                         texto3.setText(nom_fer1+":"+fer1*ha+" kg/ha");
                         texto4.setText(nom_fer2+":"+fer2*ha+" kg/ha");
                         texto5.setText(nom_fer3+":"+fer3*ha+" kg/ha");
