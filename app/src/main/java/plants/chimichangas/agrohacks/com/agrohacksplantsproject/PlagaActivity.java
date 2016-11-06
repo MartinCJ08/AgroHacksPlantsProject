@@ -7,6 +7,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
+
+import plants.chimichangas.agrohacks.com.agrohacksplantsproject.db.DbHelper;
 
 public class PlagaActivity extends AppCompatActivity {
 
@@ -14,7 +17,7 @@ public class PlagaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plaga);
-
+        setTitle("Informacion");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final Intent intent = new Intent(getApplicationContext(), infoActivity.class);
@@ -28,6 +31,17 @@ public class PlagaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        String titler = this.getIntent().getExtras().getString("value");
+        System.out.println("titler "+titler);
+        DbHelper hp = new DbHelper(this);
+        TextView sc = (TextView) findViewById(R.id.textPlagas);
+        System.out.println("hp "+hp.getContent(titler));
+        if(hp.getPlantByName(titler).equals(titler)){
+            System.out.println("Entro al if");
+            //sc.setText("Ñonga");
+            sc.setText(""+hp.getContent(titler));
+        }
+       // sc.setText(""+hp.getContent(f.getsName()));
 
     }
 }

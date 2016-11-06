@@ -77,4 +77,16 @@ public class DbHelper extends SQLiteOpenHelper {
         c.close();
         return data;
     }
+    public String getContent(String nombre) {
+        String data = "";
+        Cursor c = getReadableDatabase().rawQuery("SELECT plaga FROM plant WHERE name='"+nombre+"'", null);
+        if (c.moveToFirst()) {
+            do {
+                data = c.getString(c.getColumnIndex("plaga"));
+                // do what ever you want here
+            } while (c.moveToNext());
+        }
+        c.close();
+        return data;
+    }
 }

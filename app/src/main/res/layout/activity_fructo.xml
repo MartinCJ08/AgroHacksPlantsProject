@@ -20,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:onClick="onClickScroll" />
+        android:onClick="ibtnCeb" />
 
     <Button
         android:text="Alfalfa"
@@ -31,7 +31,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="28dp"
         android:layout_alignParentEnd="true"
-        android:onClick="onClickScroll" />
+        android:onClick="ibtnAlfa" />
 
     <Button
         android:text="Chile"
@@ -42,7 +42,7 @@
         android:layout_below="@+id/ibtnAlfa"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:onClick="onClickScroll" />
+        android:onClick="ibtnChile" />
 
     <Button
         android:text="Maíz"
@@ -53,7 +53,7 @@
         android:layout_below="@+id/ibtnChile"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:onClick="onClickScroll" />
+        android:onClick="ibtnMaiz" />
 
     <Button
         android:text="Nuez"
@@ -64,5 +64,5 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="45dp"
         android:layout_alignParentEnd="true"
-        android:onClick="onClickScroll" />
+        android:onClick="ibtnNuez" />
 </RelativeLayout>

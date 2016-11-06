@@ -22,12 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void btnCultivos(View view){
         DbHelper h = new DbHelper(this);
-        String queryRec = h.getPlantByName("Cebolla");
-        if(queryRec.equals("Cebolla")){
-            System.out.println("El dato existe: "+queryRec);
-        }else{
-            System.out.println("El dato no existe: "+queryRec);
-        }
+
         startActivity(new Intent(MainActivity.this, FructoActivity.class));
     }
     public void btnSim(View view) {
@@ -35,5 +30,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-   
+
 }

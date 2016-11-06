@@ -16,7 +16,7 @@ import plants.chimichangas.agrohacks.com.agrohacksplantsproject.db.PlantContract
 public class infoActivity extends AppCompatActivity implements OnMapReadyCallback {
     private String cd="";
     private GoogleMap mapita;
-    private String nameCol="TEST";
+    private String nameCol= (String) new PlagaActivity().getTitle();
     private float lat;
     private float longi;
     private LatLng l1;
@@ -24,7 +24,7 @@ public class infoActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-        setCd("Chihuahua");
+        setCd("Edo. con mayor produccion");
         MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         DbHelper h = new DbHelper(this);
         lat= Float.parseFloat(h.searchCordenates("lat",nameCol));
@@ -39,8 +39,7 @@ public class infoActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap mapita) {
         this.mapita=mapita;
-        mapita.addMarker(new MarkerOptions().position(new LatLng(28.632996,-106.0691)).title(cd));
-        mapita.addMarker(new MarkerOptions().position(l1).title("2222xd"));
+        mapita.addMarker(new MarkerOptions().position(l1).title(cd));
         Toast.makeText(this,"Cord: "+lat+","+longi,Toast.LENGTH_LONG).show();
 
     }

@@ -5,56 +5,48 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import plants.chimichangas.agrohacks.com.agrohacksplantsproject.db.DbHelper;
+
 public class FructoActivity extends AppCompatActivity {
-    private String sqlQuery="";
+    private String sName;
+    Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fructo);
+        //android.R.layout
         setTitle("Cultivos");
     }
 
-    public void onClickScroll(View view){
-        Intent activity;
-        String sName="";
-        //sqlQuery = "SELECT name result FROM plants WHERE name=="+sName;
-        switch (view.getId()) {
-            case R.id.ibtnAlfa:
-                //DO something
-                System.out.println("Alfalfa");
-                sName = "Alfalfa";
-                activity = new Intent(getApplicationContext(), PlagaActivity.class);
-                startActivity(activity);
-                break;
-            case R.id.ibtnCeb:
-                //DO something
-
-                System.out.println("Cebolla");
-                sName = "Cebolla";
-                activity = new Intent(getApplicationContext(), PlagaActivity.class);
-                startActivity(activity);
-                break;
-            case R.id.ibtnChile:
-                System.out.println("Chile jalapeño");
-                sName = "Chile";
-                activity = new Intent(getApplicationContext(), PlagaActivity.class);
-                startActivity(activity);
-                break;
-            case R.id.ibtnMaiz:
-                System.out.println("Maíz");
-                sName = "Maiz";
-                activity = new Intent(getApplicationContext(), PlagaActivity.class);
-                startActivity(activity);
-                break;
-            case R.id.ibtnNuez:
-                System.out.println("Nuez");
-                sName = "Nuez";
-                activity = new Intent(getApplicationContext(), PlagaActivity.class);
-                startActivity(activity);
-                break;
-        }
+    public void ibtnCeb(View view) {
+        //sName="Cebolla";
+        String value="";
+        i=new Intent(getApplicationContext(), PlagaActivity.class);
+        i.putExtra(value,"Cebolla");
+        System.out.println(i.getExtras());
+        startActivity(i);
     }
-    /*public String getSqlQuery(){
-        return sqlQuery;
-    }*/
+    public void ibtnMaiz(View view) {
+        String value="";
+        i=new Intent(getApplicationContext(), PlagaActivity.class);
+        i.putExtra(value,"Cebolla");;
+        startActivity(i);
+    }
+
+    public void ibtnAlfa(View view) {
+        i=new Intent(getApplicationContext(), PlagaActivity.class);
+        i.putExtra(sName,"Alfalfa");
+        startActivity(i);
+    }
+    public void ibtnChile(View view) {
+        i=new Intent(getApplicationContext(), PlagaActivity.class);
+        i.putExtra(sName,"Chile");
+        startActivity(i);
+    }
+    public void ibtnNuez(View view) {
+        i=new Intent(getApplicationContext(), PlagaActivity.class);
+        i.putExtra(sName,"Nuez");
+        startActivity(i);
+    }
+
 }
