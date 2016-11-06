@@ -29,11 +29,13 @@ public class frame_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frame_2);
+        rg_1 =(RadioGroup)findViewById(R.id.rg_cultivos);
+        rg_1.setHovered(true);
         onClickListenerButton();
 
     }
     public void onClickListenerButton(){
-        rg_1 =(RadioGroup)findViewById(R.id.rg_cultivos);
+        //rg_1 =(RadioGroup)findViewById(R.id.rg_cultivos);
         boton1= (Button)findViewById(R.id.pendiente);
 
 
@@ -77,20 +79,20 @@ public class frame_2 extends AppCompatActivity {
                             case R.id.r_4:
 
                                 val=4;
-                                fer1=1;
+                                fer1=56;
                                 nom_fer1="Fósforo";
-                                fer2=4;
+                                fer2=47;
                                 nom_fer2="Potasio";
-                                fer3=2;
+                                fer3=43;
                                 nom_fer3="Nitrógeno";
                                 break;
                             case R.id.r_5:
                                 val=5;
-                                fer1=1;
+                                fer1=68;
                                 nom_fer1="Fósforo";
-                                fer2=4;
+                                fer2=34;
                                 nom_fer2="Potasio";
-                                fer3=2;
+                                fer3=98;
                                 nom_fer3="Nitrógeno";
 
                                 break;
@@ -109,7 +111,7 @@ public class frame_2 extends AppCompatActivity {
                         //System.out.println("r__n "+ r_n);
                         //System.out.println("Select "+ selected_id);
                         Toast.makeText(frame_2.this,
-                                r_n.getText().toString(),Toast.LENGTH_SHORT).show();;
+                                r_n.getText().toString(),Toast.LENGTH_SHORT).show();
 
 
 

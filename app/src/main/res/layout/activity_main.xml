@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#82E063"
+    android:background="#84A608"
 
 tools:context="plants.chimichangas.agrohacks.com.agrohacksplantsproject.MainActivity">
 
