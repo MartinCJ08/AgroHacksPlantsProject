@@ -14,6 +14,7 @@ public class FrucScrollActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fruc_scroll);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final Intent intent = new Intent(getApplicationContext(), PlagaActivity.class);
